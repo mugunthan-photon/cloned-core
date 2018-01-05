@@ -1,0 +1,105 @@
+@import "../../assets/styles/colors/colors.css";
+
+.wrap {
+    position: relative;
+}
+
+.clear{
+    &:after{
+        display: block;
+        content: ' ';
+        clear: both;
+    }
+    &:before{
+        display: table;
+        content: ' ';
+        clear: both;
+        width: 0;
+        height: 0;
+    }
+}
+
+.checkbox {
+    display: none;
+
+      & + .label {
+        color: var(--color-light-black);
+        cursor: pointer;
+        vertical-align: middle;
+        display: table;
+        position: relative;
+        width: 100%;
+
+        &:before {
+            content: "";
+            float: left;
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            background: var(--color-white);
+            border-radius: 2px;
+            border: 2px solid var(--color-seconday-turquoise);
+            margin: 8px;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            position: absolute;
+            top: 12px;
+            left: 16px;
+            width: 7px;
+            height: 13px;
+            cursor: pointer;
+            border-style: solid;
+            border-color: transparent;
+        }
+
+        & .labelContainer{
+            display: table-cell;
+            width: 100%;
+            vertical-align: middle;
+            line-height: 15px;
+        }
+    }
+
+
+    /* Checkbox Checked Styles */
+    &:checked {
+        & + .label {
+            &:before {
+                background: var(--color-seconday-turquoise);
+                box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+            }
+
+            &:after {
+                border-color: var(--color-white);
+            }
+        }
+    }
+
+    /* Checkbox Disabled Styles */
+    &:disabled {
+        & + .label {
+            color: var(--color-gray-4);
+            opacity: 0.5;
+            cursor: default;
+
+            &:before {
+                background-color: var(--color-solitude);
+                border-color: var(--color-gray-4);
+            }
+        }
+        &:checked {
+            & + .label {
+                &:after {
+                    border-color: var(--color-gray-6);
+                }
+            }
+        }
+    }
+
+}

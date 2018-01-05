@@ -1,0 +1,33 @@
+/*
+* ** START **: Loader css to show two separate divs and two
+* different types of loader in storybook
+*/
+
+.loader-wrapper-strybk {
+  display: block;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+}
+.loader-only-strybk {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  float: left;
+  position: relative;
+  margin-right: 10px;
+  border: 1px solid grey;
+}
+
+.loader-with-overlay-strybk {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  position: relative;
+  border: 1px solid grey;
+}
+
+/*
+* ** END **: Loader css to show two separate divs and two
+* different types of loader in storybook
+*/

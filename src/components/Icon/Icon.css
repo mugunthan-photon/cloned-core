@@ -1,0 +1,11 @@
+@import '../../assets/styles/colors/colors.css';
+
+.icon-main {
+    display: inline-block;
+}
+
+
+.iconPath {
+    fill: var(--color-red);
+    color: var(--color-dark-red);
+}

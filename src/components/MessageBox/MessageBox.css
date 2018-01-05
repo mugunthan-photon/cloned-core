@@ -1,0 +1,154 @@
+@import "../../assets/styles/colors/colors.css";
+@import "../../assets/styles/grid/grid.css";
+@import '../../assets/styles/fonts/fonts.css';
+
+.messageBox {
+	margin: 0;
+    margin-bottom: 16px;
+    font-family: var(--open-sans);
+    font-style: normal;
+    font-size: 14px;
+
+    & .messageBoxBlock {
+        padding-bottom: 10px;
+	    box-shadow: 0 2px 4px 0 rgba(83, 95, 107, 0.5);
+
+        & .messageGrid {
+            position: relative;
+
+            & .messageIcon {
+                position: absolute;
+                width: 40px;
+                top: 0;
+                left: 0;
+            }
+
+            & .messageContent {
+                margin-top: 10px;
+                margin-left: 40px;
+            }
+
+            & .messageTitle {
+                opacity: 0.75;
+                font-size: 14px;
+                font-weight: bold;
+                text-align: left;
+                & a {
+                    color: var(--color-seconday-turquoise);
+                }
+            }
+
+            & .messageText {
+                font-size: 14px;
+                font-weight: normal;
+                color: var(--color-gray-7);
+				word-wrap: break-word;
+            }
+        }
+
+        & .close {
+            margin-top: 5px;
+            float: right;
+        }
+    }
+
+    /* Error Message */
+    &.errorMessage {
+        & .messageBoxBlock {
+            border: 1px solid var(--color-error-red);
+            background-color: var(--color-error-red-bg);
+        }
+
+        & .messageTitle {
+            color: var(--color-error-red);
+        }
+    }
+
+    /* Success Message */
+    &.successMessage {
+        & .messageBoxBlock {
+            border: 1px solid var(--color-success-green);
+            background-color: var(--color-success-green-bg);
+        }
+
+        & .messageTitle {
+            color: var(--color-success-green);
+        }
+    }
+
+    /* Warning Message */
+    &.warningMessage {
+        & .messageBoxBlock {
+            border: 1px solid var(--color-warning-orange);
+            background-color: var(--color-warning-bg);
+        }
+
+        & .messageTitle {
+            color: var(--color-warning-orange);
+        }
+    }
+
+    /* Information Message */
+    &.informationMessage {
+        & .messageBoxBlock {
+            border: 1px solid var(--color-neutral-blue);
+            background-color: var(--color-neutral-blue-bg);
+        }
+
+        & .messageTitle {
+            color: var(--color-neutral-blue);
+        }
+    }
+
+    /* Level Based Styles */
+    & .inlineLevel {
+        &.messageBoxBlock {
+            background: none;
+            box-shadow: none;
+            padding: 0;
+            border: 0;
+
+            & .close {
+                display: none;
+            }
+
+            & .messageIcon {
+                width: 25px;
+            }
+
+            & .messageContent {
+                margin-left: 20px;
+                text-align: left;
+            }
+        }
+    }
+
+    & .pageLevel {
+        border-radius: 0 0 4px 4px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        /* For Larger Screens width as per the UX */
+        @media (--viewport-xl) {
+            width: 650px;
+        }
+
+        @media (--viewport-lg) {
+            width: 650px;
+        }
+
+        @media (--viewport-md) {
+            width: 470px;
+        }
+
+        @media (--viewport-sm) {
+            width: 300px;
+        }
+    }
+
+    & .sectionLevel {
+        border-radius: 4px;
+    }
+}

@@ -1,0 +1,17 @@
+.btnStories {
+
+    & .customBtn {
+        width: 207px;
+        padding: 0px 7px 0px 7px;
+        height: 40px;
+    }    
+    & h4 {
+        font-weight: normal;
+        font-size: 20px;
+        margin-bottom: 4px;
+    }
+    & button {
+        display: inline-block;
+        margin: 0 15px 15px 0;
+    }
+}

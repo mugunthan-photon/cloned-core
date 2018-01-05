@@ -1,0 +1,69 @@
+@import "../../assets/styles/colors/colors.css";
+@import '../../assets/styles/grid/grid.css';
+
+.timer {
+  overflow: auto;
+
+  & .timerListItem , & .suffix {
+    font-size: 24px;
+    float: left;
+    margin: 4px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  & .timerText {
+    display: block;
+    font-size: 12px;
+    margin-top: -6px;
+  }
+}
+
+
+
+.timerClockDigit {
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Timer Flip Css starts in here */
+.timerClockDigitInner {
+  width: 30px;
+  height: 45px;
+  transform-style: preserve-3d;
+}
+
+.timerClockDigitInner.timerFlip {
+  transition: all 450ms ease;
+}
+
+
+/* Timer Flip css ends in here */
+
+.timerPrevNumber, .timerNextNumber {
+  background: var(--color-white);
+  font-size: 40px;
+  font-weight: normal;
+  color: var(--color-black);
+  line-height: 40px;
+  height: 45px;
+}
+
+.timerPrevNumber {
+  transform: translateZ(28px);
+}
+
+.timerNextNumber {
+  background: var(--color-black);
+  transform: rotateX(90deg) translateZ(68px);
+}
+
+.timerClockDigitInner.timerFlip {
+  transform: rotateX(-89deg);
+
+  & .timerNextNumber {
+    background: var(--color-white);
+    transition: all 250ms ease;
+  }
+}

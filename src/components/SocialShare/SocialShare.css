@@ -1,0 +1,15 @@
+@import "../../assets/styles/colors/colors.css";
+
+.socialShareIconWrapper {
+    display: inline-block;
+
+    & .socialShareIcons {
+        cursor: pointer;
+    }
+
+    & .socialAnchor {
+        text-decoration: none;
+        color: var(--color-light-black);
+        margin-right: 15px;
+    }
+}

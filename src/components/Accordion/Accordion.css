@@ -1,0 +1,59 @@
+@import "../../assets/styles/colors/colors.css";
+
+.accordion {
+    border: solid 1px var(--color-solid-gray);
+    border-bottom-width: 0;
+}
+.buttonHeader {
+  width: 100%;
+  text-align: left;
+}
+
+.accordionSection {
+    border-bottom: solid 1px var(--color-solid-gray);
+
+    & .panelHeader {
+        padding: 18px;
+        font-size: 16px;
+        background-color: var(--color-gray);
+        outline: none;
+        border: none;
+        margin: 0;
+        position: relative;
+
+        &:hover {
+            background-color: var(--color-solid-gray);
+        }
+
+        & .iconBlock {
+            position: absolute;
+            right: 10px;
+            top: 12px;
+        }
+    }
+
+    & > .panel {
+        display: none;
+        height: 0;
+        padding: 0 10px;
+        overflow-y: hidden;
+        transition: all 0.25s ease-in-out;
+    }
+
+    &.selected {
+        & .panelHeader {
+            background-color: var(--color-solid-gray);
+        }
+
+        & > .panel {
+           display: block;
+           height: inherit;
+           padding-top: 10px;
+           padding-bottom: 11px;
+        }
+    }
+}
+
+.iconTheme{
+    stroke: black;
+}

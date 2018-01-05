@@ -1,0 +1,93 @@
+@import "../../assets/styles/colors/colors.css";
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Need to remove once the other implemented code was cleaned */
+.starSvgRating {
+    display: none;
+}
+
+.starSvg {
+    & .starIconRatingBlock {
+        display: none;
+    }
+
+    & .starSvgRating {
+        display: block;
+    }
+}
+
+.starIcon {
+    & .starIconRatingBlock {
+        display: block;
+    }
+
+    & .starSvgRating {
+        display: none;
+    }
+}
+/* Need to remove once the other implemented code was cleaned */
+
+.starIconRatingBlock {
+    & .starIcon {
+        unicode-bidi: bidi-override;
+        color: var(--color-gray);
+        font-size: 16px;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        padding: 0;
+        text-shadow: 0px 1px 0 var(--color-light-gray);
+
+        /* For the theme Demo Purpose */
+        &.small {
+            font-size: 12px;
+        }
+
+        &.medium {
+            font-size: 16px;
+        }
+
+        &.large {
+            font-size: 20px;
+        }
+
+        &.xLarge {
+            font-size: 25px;
+        }
+        /* For the theme Demo Purpose Ends */
+    }
+
+    & .starIconRatingValue {
+        padding: 0;
+        position: absolute;
+        /* z-index: 1;  Removed z-index because facing issues during overlay*/
+        display: block;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        color: var(--color-error-red);
+        white-space: nowrap;
+
+        /* For the theme Demo Purpose Ends */
+        &.jcpRed {
+            color: var(--color-red);
+        }
+
+        &.jcpBlue {
+            color: var(--color-neutral-blue);
+        }
+
+        &.jcpTurquoise {
+            color: var(--color-seconday-turquoise);
+        }
+
+        &.jcpGreen {
+            color: var(--color-coupon-green);
+        }
+        /* For the theme Demo Purpose Ends */
+    }
+}

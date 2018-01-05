@@ -1,0 +1,7 @@
+@import '../../../assets/styles/colors/colors.css';
+
+
+.carouselBullets {
+  text-align: center;
+  background: var(--color-dark-red);
+}

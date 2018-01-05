@@ -1,0 +1,137 @@
+@import "../../assets/styles/colors/colors.css";
+
+.dropdownMenu {
+  background: none;
+  position: relative;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: inherit;
+  height: calc(100% - 40px);;
+  display: block;
+
+  & .dropdownMenuWrapper {
+    width: 100%;
+    background: var(--color-white);
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    & .dropDownMenuListItem {
+      text-align: left;
+      display: block;
+
+      &:last-child {
+        & .menuListItemLink {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    & .dropdownMenuTitle {
+      position: relative;
+      background: var(--color-davy-gray);
+      font-size: 20px;
+      padding: 5px 15px;
+      
+      & .dropdownMenuTitleBlock {
+        padding-left: 20px;
+      }
+      
+      & .menuWrapperClose {
+        padding: 1px 0;
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+
+    & .menuList {
+      height: 100%;
+      background: var(--color-white);
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    & .menuListItem {
+      list-style-type: none;
+    }
+
+    & .subMenuList {
+      padding: 0 16px;
+    }
+
+    & .menuListItemLink {
+      display: block;
+      width: 100%;
+      padding: .625rem 1.25rem;
+      border-bottom: solid 1px var(--color-light-gray);
+      color: var(--color-light-black);
+      text-decoration: none;
+      background: transparent;
+      position: relative;
+
+      & .suffixDefault,
+      & .suffixLink {
+          font-weight: bold;
+      }
+
+      & .suffixLink {
+          color: var(--color-anchor-color);
+      }
+    }
+
+    & .dropdownMenuSubTitle {
+      font-weight: bold;
+      text-transform: capitalize;
+      
+      & .subtitleLink {
+        width: 100%;
+        text-align: left;
+      }
+      
+      & .subTitle {
+        text-transform: uppercase;
+        font-weight: bold;
+        vertical-align: middle;
+      }
+      
+      & .menuLeftNavArrow {
+        font-style: normal;
+
+        & .svg-icon {
+          content: '';
+          font-weight: normal;
+          font-size: 20px;
+          padding-right: 5px;
+        }
+      }
+    }
+
+    & .menuListItemName {
+      float: left;
+      padding-top: 2px;
+      text-transform: capitalize;
+      font-size: 0.875rem;
+      text-align: left;
+    }
+    
+    & .menuRightNavArrow {
+      font-style: normal;
+      position: absolute;
+      right: .25rem;
+      top: 50%;
+      font-size: .875rem;
+      color: #888;
+      margin-top: -.625rem;
+
+      &.hide {
+        display: none;
+      }
+    }
+  }
+}

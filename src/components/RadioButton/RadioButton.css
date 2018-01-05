@@ -1,0 +1,168 @@
+@import "../../assets/styles/colors/colors.css";
+.radioContainer {
+    position: relative;
+    
+    & .radioButton,
+    &.radioBtnDefault {
+        display: none;
+
+        /* Radio Button Normal State Styles */
+        & + .radioLabel {
+            color: var(--color-light-black);
+            z-index: 0;
+            position: relative;
+            cursor: pointer;
+            vertical-align: middle;
+            padding-left: 32px;
+
+            &:before {
+                content: '';
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                content: '';
+                display: inline-block;
+                background-color: var(--color-white);
+                border: solid 2px var(--color-seconday-turquoise);
+            }
+
+            &:after {
+                content: '';
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                position: absolute;
+                left: 8px;
+                top: 50%;
+                transform: translateY(-50%);
+                content: '';
+                display: inline-block;
+                background: none;
+            }
+
+            &:hover {
+                &:before {
+                    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+                }
+                &:after {
+                    background: var(--color-seconday-turquoise);
+                    opacity: 0.3;
+                }
+            }
+        }
+
+        /* Radio Button Checked Styles */
+        &:checked {
+            & + .radioLabel {
+                &:before {
+                    background-color: var(--color-seconday-turquoise);
+                    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+                }
+
+                &:after {
+                    background: var(--color-white);
+                    opacity: 1;
+                }
+
+                &:hover {
+                    &:before {
+                        background-color: var(--color-primary-turquoise);
+                    }
+
+                    &:after {
+                        background-color: var(--color-white);
+                    }
+                }
+            }
+        }
+
+        /* Radio Button disabled Styles */
+        &:disabled {
+            &:checked {
+                & + .radioLabel {
+                    cursor: default;
+                    
+                    &::before {
+                        background-color: var(--color-gray-8);
+                    }
+                    
+                    &:after {
+                        opacity: 0.3;
+                        background-color: var(--color-gray-7);
+                    }
+                    
+                    &:hover {
+                        &:before {
+                            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+                        }
+                        
+                        &:after {
+                            opacity: 0.3;
+                            background-color: var(--color-gray-7);
+                        }
+                    }
+                }
+            }
+
+            & + .radioLabel {
+                cursor: default;
+                opacity: 0.5;
+                
+                &:before {
+                    background-color: var(--color-gray-8);
+                    border: 2px solid var(--color-gray-4);
+                }
+                
+                &:hover {
+                    &:before {
+                        box-shadow: none;
+                    }
+                    
+                    &:after {
+                        background-color: var(--color-gray-8);
+                    }
+                }
+            }
+        }
+
+        /* Radio Button Error Styles */
+        &.radioBtnError {
+            & + .radioLabel {
+                color: var(--color-dark-red);
+                
+                &:before {
+                    background-color: var(--color-white);
+                    border: 2px solid var(--color-dark-red);
+                }
+                
+                &:hover {
+                    &:after {
+                        background: var(--color-dark-red);
+                    }
+                }
+            }
+            
+            &:checked {
+                & + .radioLabel {
+                    &:after {
+                        background: var(--color-dark-red);
+                    }
+                    
+                    &:hover {
+                        &:before {
+                            background: var(--color-white);
+                        }
+                        
+                        &:after {
+                            opacity: 0.2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

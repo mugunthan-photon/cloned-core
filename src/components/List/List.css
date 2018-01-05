@@ -1,0 +1,136 @@
+@import "../../assets/styles/settings/variables.css";
+@import "../../assets/styles/colors/colors.css";
+@import '../../assets/styles/settings/reset.css';
+@import "../../assets/styles/settings/util.css";
+
+/* List Main */
+.list-main {
+  & .list-li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+/* List Main Ends */
+
+/* List Scroll Horizontal */
+.list-scroll-h {
+  width: 50%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  & .list-ul {
+    width: 100%;
+    display: table;
+    
+    & .list-li {
+      display: table-cell;
+      vertical-align: top;
+      text-align: left;
+    }
+  }
+}
+/* List Scroll Horizontal Ends */
+
+/* List Scroll Vertical */
+.list-scroll-v {
+  width: 100%;
+  
+  & .list-ul {
+    display: block;
+    
+    & .list-li {
+      display: block;
+    }
+  }
+}
+/* List Scroll Vertical Ends */
+
+/* List Fluid */
+.list-as-fluid {
+  
+  & .list-li {
+    vertical-align: top;
+  }
+}
+/* List Fluid Ends */
+
+/* List as Table and Table Bordered */
+.list-as-table,
+.list-as-table-bordered {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  
+  & .list-ul {
+    display: table-row;
+
+    & .list-li {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+.list-as-table-bordered {
+  & .list-ul {
+    & .list-li {
+      border-bottom: 0.0625rem solid var(--color-gray);
+      border-right: 0.0625rem solid var(--color-gray);
+
+      &:last-child {
+        border-right: none;
+        
+        &:first-child {
+          border-right: 0.0625rem solid var(--color-gray);
+        }
+      }
+    }
+    &:last-child {
+      & .list-li {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+/* List as Table Bordered Ends */
+
+.none {
+  padding: 0;
+
+  & .list-ul {
+    & .list-li {
+      padding: 0;
+    }
+  }
+}
+
+.cozy {
+  padding: var(--cozy);
+  
+  & .list-ul {
+    & .list-li {
+      padding: var(--cozy);
+    }
+  }
+}
+
+.compact {
+  padding: var(--compact);
+  
+  & .list-ul {
+    & .list-li {
+      padding: var(--compact);
+    }
+  }
+}
+
+.comfy {
+  padding: var(--comfy);
+  
+  & .list-ul {
+    & .list-li {
+      padding: var(--comfy);
+    }
+  }
+}

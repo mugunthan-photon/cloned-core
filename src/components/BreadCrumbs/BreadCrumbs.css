@@ -1,0 +1,59 @@
+@import "../../assets/styles/colors/colors.css";
+@import "../../assets/styles/grid/grid.css";
+
+.active {
+    color: var(--color-gray-5);
+}
+
+
+.crumbContainer {
+    padding-top: 24px;
+    padding-bottom: 8px;
+    white-space: nowrap;
+    overflow-x: auto;
+    font-size: 14px;
+
+ & .crumbListItem {
+    display: inline-block;
+    text-transform: capitalize;
+
+    & .crumbLinks span {
+        color: var(--color-seconday-turquoise);
+        cursor: pointer;
+        text-decoration: underline;
+    }
+ }
+}
+
+ /*#23527c*/
+
+ /* TODO :: Need to install Postcss module like inherit or extend to inherit common css */
+/* Allowing it to be lossely coupled */
+.slash:after {
+
+    padding: 0 8px;
+    color: var(--color-dark-solid-gray);
+    content: "/\00a0";
+    display: inline-block;
+    text-decoration: none;
+    cursor: default;
+    font-size:14px;
+    vertical-align: middle;
+}
+
+.arrow:after {
+    padding: 0 8px;
+    color: var(--color-dark-solid-gray);
+    content: "\3e";
+    display: inline-block;
+    text-decoration: none;
+    cursor: default;
+    font-size:12px;
+    vertical-align: middle;
+}
+
+
+.none:after {
+    padding: 0 5px;
+    content: "";
+}

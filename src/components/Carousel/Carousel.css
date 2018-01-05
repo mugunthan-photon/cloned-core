@@ -1,0 +1,88 @@
+@import "../../assets/styles/colors/colors.css";
+@import "../../assets/styles/settings/breakpoints.css";
+
+.carousel {
+    & .carouselList {
+        padding: 0;
+        margin: 0;
+        table-layout: fixed;
+
+        & img {
+            width: 100%
+        }
+    }
+
+    & .carouselContainer{
+       width: 100%;
+       overflow: hidden;
+    }
+
+    & .bulletContainer {
+        text-align: center;
+
+        & :global(.svg-icon) {
+            opacity: 0.5;
+        }
+
+        & .selected {
+            & :global(.svg-icon) {
+                opacity: 1;
+            }
+        }
+    }
+
+    & .nextWrapper,
+    & .previousWrapper {
+        position: absolute;
+        top: 50%;
+        width: 26px;
+        text-align: center;
+        background: rgba(255, 255, 255, .5);
+        transform: translateY(-50%);
+    }
+
+    & .next,
+    & .previous {
+        display: block;
+        color: var(--color-white);
+        font-size: 1.5rem;
+        text-decoration: none;
+        cursor: pointer;
+        line-height: 1
+    }
+
+    & .nextWrapper {
+        right: 0
+    }
+
+    & .previousWrapper {
+        left: 0
+    }
+}
+
+.bullet {
+    background: var(--color-light-gray);
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+    opacity: 0.7;
+    cursor: pointer;
+    margin: 0 5px;
+    display: inline-block;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.swipe-container {
+    width: 100000%;
+}
+
+
+.slide {
+    width: 48vw;
+    @media (--viewport-sm) {
+        width: 95vw;
+    }
+}

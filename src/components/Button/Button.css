@@ -1,0 +1,197 @@
+@import "../../assets/styles/colors/colors.css";
+@import '../../assets/styles/settings/util.css';
+@import '../../assets/styles/fonts/fonts.css';    
+
+.btn { 
+    color: blue;
+    background: var(--color-black);
+    font-family: var(--main-font);
+    font-weight: 500;
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgba(83, 95, 107, 0.5);
+    min-width: 120px;
+    padding: 8px 0;
+    line-height: 25px; 
+
+    /* Button Common hover styles */
+    &:hover {
+        box-shadow: 0 4px 8px 0 rgba(83, 95, 107, 0.5);
+    }
+
+    /* Button common Active Styles */
+    &:active {
+        box-shadow: 0 1px 2px 0 rgba(83, 95, 107, 0.5);
+        color: var(--color-gray-8);
+    }
+
+    /* Button Common Disabled Styles */ . 
+    &:disabled {
+        opacity: 0.5;
+        box-shadow: none;
+        cursor: default;
+    }
+
+    &.btnText, &.btnLink {
+        background: none;
+        border: 0;
+        box-shadow: none;
+    }
+
+    /* Button Size styles based on the sizes */
+    /* Default Size button, Sizes will change based on the resolution */
+    &.btnDefault {
+        @media (--viewport-lg-plus) {
+            font-size: 16px;
+            padding: 12px 0;
+            &.btnText, &.btnLink {
+                font-size: 20px;
+            }
+        }
+
+        @media (--viewport-md) {
+            font-size: 14px;
+            padding: 8px 0;
+            &.btnText, &.btnLink {
+                font-size: 16px;
+            }
+        }
+
+        @media (--viewport-sm) {
+            font-size: 14px;
+            padding: 4px 0;
+            &.btnText, &.btnLink {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &.btnLg {
+        min-width: 160px;
+        font-size: 16px;
+        padding: 12px 0;
+        &.btnText, &.btnLink {
+            font-size: 20px;
+        }
+    }
+
+    &.btnMd {
+        font-size: 14px;
+        padding: 8px 0;
+        &.btnText,
+        &.btnLink {
+            font-size: 16px;
+        }
+    }
+
+    &.btnSm {
+        font-size: 14px;
+        padding: 4px 0;
+
+        &.btnText,
+        &.btnLink {
+            font-size: 14px;
+        }
+    }
+
+    &.btnXl {
+        width: 100%;
+    }
+
+    /* Button Type Styles based on the Button Types */
+    /* Primary Button */
+    &.btnPrimary {
+        background-color: green;
+
+        &:hover {
+            background-color: var(--color-branded-dark);
+        }
+
+
+        &:active {
+            background-color: var(--color-magentadark);
+        }
+    }
+
+    /* Secondary Button */
+    &.btnSecondary {
+        background-color: var(--color-black);
+        border: solid 1px var(--color-gray-3);
+        color: var(--color-gray-6);
+
+        &:hover {
+            background-color: var(--color-gray-0);
+        }
+
+        &:active {
+            background-color: var(--color-gray-8);
+            color: var(--color-gray-7)
+        }
+
+        &:disabled {
+            background-color: var(--color-solitude);
+            color: var(--color-gray-7);
+            border: 0;
+        }
+    }
+
+     &.btnEllipsis {
+       white-space: nowrap;
+       text-overflow: ellipsis;
+       overflow: hidden;
+    }
+
+    /* Tertiary Button */
+    &.btnTertiary {
+        background-color: var(--color-seconday-turquoise);
+
+        &:hover {
+            background-color: var(--color-primary-turquoise);
+        }
+
+        &:active {
+            background-color: var(--color-darkcyan-2);
+        }
+    }
+
+    /* Text and Link Button */
+    &.btnText,
+    &.btnLink {
+        color: var(--color-seconday-turquoise);
+        padding: 0;
+        min-width: auto;
+
+        &:hover {
+            color: var(--color-primary-turquoise);
+        }
+
+        &:active {
+            color: var(--color-darkcyan-2)
+        }
+
+        &:disabled {
+            text-decoration: line-through;
+            color: var(--color-gray-4);
+        }
+    }
+
+    &.btnText {
+        font-weight: bold;
+    }
+
+    &.btnLink {
+        text-decoration: underline;
+        font-weight: bold;
+        font-family: var(--open-sans);
+    }
+
+    /* Icon and Icon Text Buttons */
+   &.iconBtn {
+       min-width: auto;
+       padding:12px;
+
+       & .btnIcon {
+           vertical-align: middle;
+       }
+   } 
+}

@@ -1,0 +1,69 @@
+@import "checkout-breakpoints.css";
+
+* {
+  outline: none;
+  -webkit-appearance: none;
+}
+
+body {
+    background: var(--color-gray-0);
+    width: 100%;
+}
+
+.containerWidth {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.clear {
+  clear: both;
+  overflow: hidden;
+}
+
+.left {float: left;}
+.right {float: right;}
+
+.alignLeft {text-align: left;}
+.alignRight {text-align: right;}
+.alignCenter {text-align: center;}
+
+.alignTop {vertical-align: top;}
+.alignMiddle {vertical-align: middle;}
+.alignBottom {vertical-align: bottom;}
+
+.pointer {cursor: pointer}
+
+/* Specific Color for reuse */
+.bgWhite { background: var(--color-white);}
+
+/* https://github.com/yahoo/pure/issues/326 */
+
+/* Small breakpoints */
+@media (--viewport-sm) {
+    .visibleMd{display:none}
+    .visibleLg{display:none}
+    .visibleXl{display:none}
+    .hiddenSm{display:none}
+}
+/* Medium breakpoints */
+@media (--viewport-md) {
+    .visibleSm{display:none}
+    .visibleLg{display:none}
+    .visibleXl{display:none}
+    .hiddenMd{display:none}
+}
+/* Large breakpoints */
+@media (--viewport-lg) {
+    .visibleSm{display:none}
+    .visibleMd{display:none}
+    .visibleXl{display:none}
+    .hiddenLg{display:none}
+}
+/* Extra Large */
+@media (--viewport-xl) {
+    .visibleSm{display:none}
+    .visibleMd{display:none}
+    .visibleLg{display:none}
+    .hiddenXl{display:none}
+}

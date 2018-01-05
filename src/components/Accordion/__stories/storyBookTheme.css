@@ -1,0 +1,61 @@
+@import '../../../assets/styles/colors/colors.css';
+
+.accordionContainer {
+  border-bottom-width: 0;
+}
+
+.imageBlock {
+  max-width: 200px;
+}
+
+.iconTheme{
+    stroke: red;    
+}
+
+.accordionSection {
+  & .panelHeader {
+    padding: 18px;
+    font-size: 16px;
+    background-color: var(--color-white);
+    margin: 0;
+    font-weight: normal;
+    outline: none;
+    border: none;
+    position: relative;
+
+    & .iconBlock {
+      position: absolute;
+      right: 10px;
+      top: 12px;
+    }
+  }
+
+  & > .panel {
+    max-height: 0;
+    padding: 0 10px;
+    overflow-y: hidden;
+  }
+
+  &.selected {
+    background: #fafafa;
+    box-shadow: inset 0 0.125rem 0.125rem 0 rgba(0,0,0,.1);
+
+
+    & > .panelHeader {
+      background: #fafafa;
+      box-shadow: inset 0 0.125rem 0.125rem 0 rgba(0,0,0,.1);
+
+      &:after {
+        content: "\2796"; /* Unicode character for "minus" sign (-) can use \2192 */
+      }
+    }
+
+    & > .panel {
+      border-bottom: .0625rem solid #eee;
+      max-height: 1000px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      transition: max-height .8s ease-in;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@import '../../../assets/styles/grid/grid.css';
+
+.timerContainer {
+  & .timer {
+    & .timerListItem  {
+      font-size: 16px;  
+      float: left;
+      margin-right: 8px;
+      font-weight: bold;
+
+      & .timerNumber {
+          /* Any Css specific if required */
+      }
+    }
+
+    & .timerText {
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+}
+
+.timerContainers {
+  overflow: auto;
+  /*font-family: sans-serif;*/
+
+ & .timer { 
+  & .timerListItem , & .suffix {
+    font-size: 40px;
+    float: left;
+    margin: 4px;
+    text-align: center;
+    line-height: 40px;
+
+    & .timerNumber {
+
+      /*you can configure based on your requirement here*/
+       @media (--viewport-sm) {
+          font-size: 25px;
+          font-weight: bolder;
+          line-height: 40px;
+      }
+      & .timerDigit {
+        padding: 3px;
+        border-radius: 2px; 
+      }
+
+      & .timerDigit:first-child {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  & .timerText {
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+  }
+ }
+}
+
+ 
+.timerDigitAnimate {
+  /*you can configure based on your requirement here*/
+  @media (--viewport-sm) {
+    width: 18px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  @media (--viewport-md) {
+    width: 25px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+}

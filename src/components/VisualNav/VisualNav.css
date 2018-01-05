@@ -1,0 +1,92 @@
+@import '../../assets/styles/colors/colors.css';
+@import '../../assets/styles/settings/util.css';
+@import '../../assets/styles/fonts/fonts.css';
+
+.visualNavList {
+    @media (--viewport-md-plus) {
+        margin: 0px 6px;
+    }
+
+    & .gridTiles {
+        display: flex;
+        flex-wrap: wrap;
+        display: -webkit-flex; /* For iOS 7 Issue */
+        -webkit-flex-wrap: wrap; /* For iOS 7 Issue */
+    }
+
+    & .gridTilesList {
+        width: 25%;
+        display: inherit;
+        padding: 4px;
+
+        @media (--viewport-sm) {
+            width: 50%;
+        }
+
+        @media (--viewport-md){
+            width: 25%;
+        }
+    }
+
+    & .gridTilesListItem {
+        padding: 0 5px 0 !important;
+        width: 16.7%;
+        @media (--viewport-sm) {
+            width: 29%;
+        }
+    }
+
+    & img {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        max-width: 232px;
+
+        @media (--viewport-md) {
+            max-width: 280px;
+        }
+    }
+}
+
+.visualNavTitleWrapper {
+    margin-left: 10px;
+    margin-top: 8px;
+    
+    & .visualTitle {
+        font: bold 20px/24px var(--main-font);
+        color: #4a4a4a;
+    }
+}
+
+.visualNavComponent {
+    list-style: none;
+    background: var(--color-white);
+    border-radius: 4px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    & .imgBlock {
+        text-align: center;
+        max-width: 232px;
+        margin: 0 auto;
+        padding-top: 5px;
+        min-height: 145px;
+        @media (--viewport-md) {
+            max-width: 145px;
+        }
+    }
+
+    & .deptTitle {
+        font: bold 1rem var(--open-sans);
+        text-transform: capitalize;
+        color: var(--color-light-black);
+        padding: 10px;
+        text-align: center;
+    }
+
+    & .cardTheme {
+        padding: 11px;
+    }
+}

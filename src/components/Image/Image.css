@@ -1,0 +1,32 @@
+.imageBoxMain {
+    position: relative;
+    height: 100;
+    overflow: hidden;
+
+    & .imageClass {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+    }
+}
+.imageAnim {
+  animation: fadeinout .8s linear;
+}
+
+@-webkit-keyframes fadeinout {
+ 0% { opacity: 0; }
+ 50% { opacity: 0.5; }
+ 100% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+ 0% { opacity: 0; }
+ 50% { opacity: 0.5; }
+ 100% { opacity: 1; }
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}

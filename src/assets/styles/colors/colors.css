@@ -1,0 +1,117 @@
+:root {
+    /*
+     * These below colours would be deprecated after design implementation
+     * As these colours are used in current core, site and other repositories
+    */
+    --color-light-white: #f5f5f5; /* Light White */
+    --color-ghost-white: #FAFAFA;  /* One kind of white */
+    --color-red: #c00; /* Red */
+    --color-medium-red: #be0000;
+    --color-dark-red:#a30000; /* Dark Red*/
+    --color-black: #000; /* Black */
+    --color-light-black: #333; /* light black */
+    --color-light-gray: #e2e2e2; /* Light Gray */
+    --color-gray: #ccc; /* Gray */
+    --color-light-slim-gray : #fafafa; /* Version of Light Gray */
+    --color-light-gray: #ddd; /* Light Gray */
+    --color-davy-gray: #eee; /* Davy Gray */
+    --color-solid-gray: #b2b2b2; /* Solid Gray */
+    --color-solid-light-gray: #666; /* Solid Light Gray */
+    --color-dark-gray: #555; /* Dark Gray */
+    --color-dark-solid-gray: #757272; /* Dark Solid Gray */
+    --color-anchor-color : #2060ca; /* Anchor Blue */
+    --color-light-slim-gray : #fafafa;
+    --color-anchor-color : #2060ca; /* Anchor Blue */
+
+    /**
+      * Below colours are from new style guidelines
+    */
+
+
+    /* Primary colors */
+    --color-primary-brand-red: #CC0000; /* Red */
+    --color-burgundy: #47091E;
+    --color-primary-turquoise: #00535f;
+    --color-seconday-turquoise: #006C7C;
+    --color-light-turquoise : #B2D2D7;
+    --color-seconday-turquoise-light: rgba(0,108,124,0.08);
+
+    /* Messaging colors */
+    --color-success-green: #01803F;
+    --color-success-green-bg: #EBF5F0;
+    --color-gold: #EEAD1F;
+    --color-gold-1: #AC8F43;
+    --color-platinum: #A3A9AB;
+    --color-warning-orange: #B45400;
+    --color-warning-bg: #FEF9ED;
+    --color-error-red: #A2000F;
+    --color-error-red-bg: #F8EBEC;
+    --color-neutral-blue: #056B9E;
+    --color-neutral-blue-bg: #EBF4F8;
+
+
+    /* Gray scale */
+    --color-white: #FFFFFF; /* white */
+    --color-gray-0: #F1F3F4;
+    --color-gray-1: #E3E6EB;
+    --color-gray-2: #D5DADF;
+    --color-gray-3: #C7CDD4;
+    --color-gray-4: #9BA5AE;
+    --color-gray-5: #53606B;
+    --color-gray-6: #384048;
+    --color-gray-7: #1C2024;
+    --color-gray-8: #E3E6EA;
+    --color-gray-9: #404848;
+    --color-gray-10: #4A4A4A;
+    --color-gray-11: #D7D7D7;
+    --color-gray-12: #8E9192;
+    --color-gray-13: #666666;
+    --color-gray-14: #989898;
+    --color-gray-15: #efefef;
+
+    /* Extended */
+    --color-branded: #CC0000;
+    --color-rasberry: #D3136A;
+    --color-magenta: #EC008C;
+    --color-mandarin: #F47920;
+    --color-yellow: #FFDB00;
+    --color-lime: #C4D92E;
+    --color-olive: #91B53B;
+    --color-green: #41AD49;
+    --color-teal: #4BC1BE;
+    --color-blue: #1191D0;
+    --color-ocean: #008896;
+    --color-navy: #1E3844;
+    --color-eggplant: #4A3C73;
+    --color-purple: #574B9F;
+    --color-lilac: #B282BA;
+    --color-alice-blue: #AFB7BB;
+    --color-orange: #DF6902;
+
+    --color-light-turquoise : #B2D2D7; /* Turquoise */
+    --color-solitude : #E3E6EA;
+    --color-link-water : #C6C9CE;
+
+    --color-darkcyan-2: #00424C;
+    --color-maroon: #761C19;
+    --color-branded-dark: #B40000;
+    --color-magentadark: #920000;
+
+    --color-coupon-green: #008A44;
+    --color-dark-green: #107a34;
+    --color-message-green: #128a4a;
+
+    --color-dark-green: #288995;
+    --color-light-red: #CF0026;
+    --color-mine-shaft: #353535;
+    --color-mine-shaft-1: #262626;
+    --color-mine-shaft-2: #2B2929;
+    --color-havelock-blue: #4990E2;
+    --color-gallery: #ECECEC;
+    --color-azuree: #3765A1;
+    --color-deep-sea-green: #0B5969;
+    --color-dark-blue: #2D2B50;
+    --color-light-white-1: #F1F1F1;
+    --color-light-gray-2: #888888;
+    --color-light-gray-3: #D8D8D8;
+}

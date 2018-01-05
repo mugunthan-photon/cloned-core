@@ -1,0 +1,27 @@
+@import '../../../assets/styles/colors/colors.css';
+
+
+.active {
+    color: var(--color-black);
+}
+
+.crumbContainer {
+    white-space:nowrap;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.crumbListItem {
+    display: inline-block;
+    
+    & .crumbLinks {
+        color: var(--color-anchor-color);
+        cursor: pointer;
+
+        &:after {
+           padding: 0 10px;
+           content: ">>";
+           color: var(--color-gray);
+        }
+    }
+}

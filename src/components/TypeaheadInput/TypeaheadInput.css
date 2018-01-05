@@ -1,0 +1,357 @@
+@import '../../assets/styles/base/base.css';
+
+:root {
+    /* Global fonts */
+    --smallFont: 0.75rem;
+}
+
+.typeaheadInputContainer {
+    border: 1px solid var(--color-gray);
+    border-radius: 2px;
+    text-align: center;
+    background: var(--color-white);
+    position: relative;
+
+    & .inputFieldBlock {
+        vertical-align: middle;
+        background: none;
+        width: 100%;
+        border-radius: 2px;
+        padding: 0 48px 0 8px;
+        position: relative;
+
+        & .searchIconBlock {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transition: all .25s;
+            transform: translateY(-50%);
+            z-index: 1;
+
+            & .headerSearchIcon {
+                color: var(--color-seconday-turquoise);
+                fill: var(--color-seconday-turquoise);
+            }
+        }
+
+       & .resetIconBlock {
+            display: inline-block;
+            vertical-align: middle;
+            position: absolute;
+            top: 50%;
+            transition: all .25s;
+            transform: translateY(-50%);
+            z-index: 1;
+            right: 40px;
+            padding: 7px 4px 7px 7px;
+        }
+
+        & .inputBox {
+            font: normal 16px/24px var(--open-sans);
+            width: 100%;
+            color: #888;
+            padding: 8px 32px 8px 8px;
+
+            &::placeholder {
+                font-style: italic;
+            }
+        }
+    }
+
+    /* ***
+    IMPORTANT: Will remove once the typeahead works duplicate the code for view purpose 
+    Updated the styles already in YODA-CORE-COMPONENTS - Typeahead Component  
+    *** */
+    & .typeaheadSuggestionBox {
+        background: var(--color-white);
+        padding-bottom: 8px;
+        /* height: 405px; /* Applied the height as per the mocks */
+        overflow: auto;
+
+        & .typeaheadTermBoxHeader,
+        & .typeaheadDeptHeader {
+            color: var(--color-gray-7);
+            cursor: pointer;
+            width: 100%;
+            font: normal 16px/1.5 var(--open-sans);
+            text-align: left;
+            display: block;
+
+            & .typeaheadRecentListText {
+                display: block;
+                width: 100%;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                padding: 8px 16px;
+                display: block;
+            }
+        }
+
+        & .typeaheadTermList {
+            & .typeaheadTermBoxHeader,
+            & .typeaheadDeptHeader {
+                background: rgba(0, 108, 124, 0.08);
+            }
+        }
+
+        & .typeaheadDeptHeader {
+            padding-left: 30px;
+
+            & .typeaheadRecentListDeptText {
+                display: block;
+                width:100%;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                padding: 8px 16px;
+                display: block;
+            }
+        }
+    }
+    /* Typeahead View Styles Ends */
+}
+
+/* Search Drop Down & Feature Products */
+.searchSuggestionFeatureContainer {
+    background: var(--color-gray-0);
+    color: var(--color-light-black);
+    box-shadow: 0 2px 4px 0 rgba(83, 96, 107, 0.5);
+    border: solid 1px var(--color-gray-3);
+    border-radius: 0 0 4px 4px;
+    text-align: left;
+    position: absolute;
+    width: 100%;
+    z-index: 6;
+    /* max-height: 408px; /* Mentioned the max height as per the UX */
+
+    @media(--viewport-lg-plus) {
+        min-width: 765px;
+    }
+
+    @media (min-width:1092px) {
+        width: 882px;
+    }
+
+    @media (--viewport-xl) {
+        width: 930px;
+    }
+
+    & .searchSuggestionFeatureBlock {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+
+        & .searchSuggestionBlock {
+            width: 240px;
+            background: var(--color-white);
+            display: table-cell;
+            vertical-align: top;
+            overflow: auto;
+            
+            @media (--viewport-sm) {
+            width: 100%;
+            }
+        }
+
+        & .searchFeatureBlock {
+            display: table-cell;
+            vertical-align: top;
+            padding: 16px 0;
+            
+            @media (--viewport-sm) {
+                display: none;
+            }
+
+            & .searchFeatureTitle {
+                font: italic normal 14px/1.71 var(--open-sans);
+                color: var(--color-gray-7);
+                padding-left: 16px;
+            }
+
+            & .searchFeatureProdTitle {
+                font: bold 16px/1.5 var(--open-sans);
+                padding: 4px 0 10px 16px;
+                text-transform: capitalize;
+
+                & .searchViewAll {
+                padding-left: 8px;
+                color: var(--color-seconday-turquoise);
+                font-size: 14px;
+                font-weight: normal;
+                text-decoration: underline;
+                }
+            }
+
+            & .featureProductList {
+                padding-top: 8px;
+
+                & .featureProdListItem {
+                    min-width: 152px;
+                    float: left;
+
+                    @media (--viewport-md) {
+                        width: 50%;
+                    }
+
+                    @media (--viewport-lg) {
+                        width: 33%;
+                    }
+
+                    @media (--viewport-xl) {
+                        width: 25%;
+                    }
+                }
+            }
+
+            & .prodListBlock {
+                margin:0 12px;
+
+                & .listStyleClass {
+                    display: flex;
+                    display: -webkit-flex;
+                    align-self: flex-start;
+
+                    & .itemStyleClass {
+                        display: inherit;
+                        min-width: 152px;
+
+                        @media (--viewport-md) {
+                            width: 50%;
+                        }
+    
+                        @media (--viewport-lg) {
+                            width: 33%;
+                        }
+    
+                        @media (--viewport-xl) {
+                            width: 25%;
+                        }
+
+                        & [class*="productCardFinal"] {
+                            & [class*="cardWrapper"] {
+                                /* min-height: 350px; */
+                                & [class*="grid"] {
+                                    & [class*="imgBlock"] {
+                                        height: 153px;
+                                        min-width: 20px;
+                                        min-height: 20px;
+
+                                        & [class*="imageClass"] {
+                                            width: 152px;
+                                        }
+                                    }
+                                
+                                    & [class*="detailsWrapper"] {
+                                        min-height: 10px;
+                                    }
+                                }
+
+                                & [class*="pricingWrapper"] {
+                                    padding-top: 0;
+
+                                    & [class*="mapPrice"] {
+                                        font-size: 12px;
+                                    }
+
+                                    & [class*="priceWrapperClass"] {
+                                        margin: 0;
+
+                                        & [class*="priceClass"] {
+                                            font-size: 16px;
+                                        }
+
+                                        & [class*="cardPriceLabel"] {
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* Search Drop Down & Feature Products Ends */
+
+/* Typeahead View Styles Ends */
+/****
+  IMPORTANT: Will remove once the Product Card Implemented
+****/
+.searchProdList {
+  background: var(--color-white);
+  border: 1px dashed var(--color-red);
+  height: 280px;
+  margin: 4px;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgba(83, 96, 107, 0.5);
+  border: solid 1px var(--color-gray-8);
+}
+
+.imgBlock {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    /*border-bottom: 1px solid var(--color-gray-8);*/
+    
+    & .imageClass {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    & .imageDetails {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        border-bottom: 1px solid var(--color-gray);
+    }
+}
+
+.detailsWrapper {
+    padding: 0.5rem 1rem 1rem;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+
+    & .colorSwatch {
+        font-size: 0.75rem;
+        line-height: 1.33;
+
+        & .colorSwatchText {
+            color: var(--color-dark-gray);
+        }
+    }
+
+    & .ecoRebate {
+        & .link {
+            font-size: 0.75rem;
+            color: var(--color-seconday-turquoise);
+            text-decoration: underline;
+        }
+    }
+}
+
+.ratingWrapper {
+    & .ratingContainer{
+        width: 120px;
+        display: inline-block;
+
+        & .rating{
+            overflow: visible;
+        }
+    }
+    
+    & .reviewCount {
+        color: var(--color-seconday-turquoise);
+        font-size: var(--smallFont);
+        font-weight: bold;
+        padding: 0 0.2rem;
+    }
+}

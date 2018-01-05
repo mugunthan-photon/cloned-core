@@ -1,0 +1,20 @@
+/* media queries for different width */
+@custom-media --viewport-sm (width < 600px);
+
+@custom-media --viewport-md (width >= 600px) and (width < 1024px);
+
+@custom-media --viewport-lg (width >= 1024px) and (width < 1440px);
+
+@custom-media --viewport-xl (width >= 1440px);
+
+@custom-media --viewport-md-plus (width >= 600px); /* Medium plus screens */
+
+@custom-media --viewport-lg-plus (width > 1024px); /* Large plus screens */
+
+/***
+    Added only to Make the Header and Footer as Per the classice
+    Have to remove once the Yoda Header Footer developed
+***/
+@custom-media --viewport-classic-sm (width < 768px);
+
+@custom-media --viewport-classic-md (width >= 768px);

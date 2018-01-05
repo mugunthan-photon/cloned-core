@@ -1,0 +1,10 @@
+.gridTiles {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+}
+
+.wrapper {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}

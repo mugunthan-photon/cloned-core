@@ -1,0 +1,13 @@
+@import "../../assets/styles/colors/colors.css";
+
+.input_default {
+  box-shadow: none;
+  width: 100%;
+
+  &::placeholder {
+    color: var(--color-light-gray);
+  }
+}
+.haveError{
+    border: 2px solid var(--color-error-red);
+}
