@@ -3,7 +3,7 @@
 @import '../../assets/styles/fonts/fonts.css';    
 
 .btn { 
-    color: blue;
+    color: yellow;
     background: var(--color-black);
     font-family: var(--main-font);
     font-weight: 500;
@@ -12,7 +12,7 @@
     box-shadow: 0 2px 4px 0 rgba(83, 95, 107, 0.5);
     min-width: 120px;
     padding: 8px 0;
-    line-height: 25px; 
+    line-height: 24px; 
 
     /* Button Common hover styles */
     &:hover {
@@ -101,7 +101,7 @@
     /* Button Type Styles based on the Button Types */
     /* Primary Button */
     &.btnPrimary {
-        background-color: black;
+        background-color: red;
 
         &:hover {
             background-color: var(--color-branded-dark);
@@ -181,7 +181,7 @@
 
     &.btnLink {
         text-decoration: underline;
-        font-weight: bold;
+        font-weight: normal;
         font-family: var(--open-sans);
     }
 
