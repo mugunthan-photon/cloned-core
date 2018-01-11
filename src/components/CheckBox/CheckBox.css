@@ -33,7 +33,7 @@
         &:before {
             content: "";
             float: left;
-            width: 154px;
+            width: 204px;
             height: 24px;
             vertical-align: middle;
             background: var(--color-white);
