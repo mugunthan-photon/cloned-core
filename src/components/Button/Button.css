@@ -3,7 +3,7 @@
 @import '../../assets/styles/fonts/fonts.css';    
 
 .btn { 
-    color: yellow;
+    color: black;
     background: var(--color-black);
     font-family: var(--main-font);
     font-weight: 500;
@@ -101,7 +101,7 @@
     /* Button Type Styles based on the Button Types */
     /* Primary Button */
     &.btnPrimary {
-        background-color: red;
+        background-color: green;
 
         &:hover {
             background-color: var(--color-branded-dark);
