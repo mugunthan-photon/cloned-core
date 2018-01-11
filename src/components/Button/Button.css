@@ -101,7 +101,7 @@
     /* Button Type Styles based on the Button Types */
     /* Primary Button */
     &.btnPrimary {
-        background-color: yellow;
+        background-color: green;
 
         &:hover {
             background-color: var(--color-branded-dark);
