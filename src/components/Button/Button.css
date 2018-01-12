@@ -3,7 +3,7 @@
 @import '../../assets/styles/fonts/fonts.css';    
 
 .btn { 
-    color: black;
+    color: blue;
     background: var(--color-black);
     font-family: var(--main-font);
     font-weight: 500;
