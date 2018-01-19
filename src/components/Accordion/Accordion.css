@@ -2,7 +2,7 @@
 
 .accordion {
     border: solid 1px var(--color-solid-gray);
-    border-bottom-width: 20;
+    border-bottom-width: 0;
 }
 .buttonHeader {
   width: 100%;
